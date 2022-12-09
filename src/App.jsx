@@ -6,6 +6,8 @@ import AppointmentInfo from "./components/AppointmentInfo"
 
 function App() {
 
+  // From here to line 23 is about fetching data from public folder
+
   let [appointmentList, setAppointmentList] = useState([]);
 
   const fetchData = useCallback(() => {
@@ -19,6 +21,7 @@ function App() {
   useEffect(() => {
     fetchData()
   }, [fetchData]);
+
   return (
     <div className="App container mx-auto mt-3 font-thin">
       <h1 className="text-5xl mb-3">
